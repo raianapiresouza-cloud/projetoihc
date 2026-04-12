@@ -9,10 +9,10 @@ Alunos
 5W3H
 
 1- O que?
- Desenvolvimento de um jogo simples e interativo, utilizando html e css, onde o usuário deve clicar ou interagir com o alvo em movimento.
+ Desenvolvimento de um jogo simples e interativo, utilizando html, css e js onde o usuário deve clicar ou interagir com o alvo em movimento.
  
 2- Por que?
- Para praticar conceitos fundamentais de HTML e CCS.
+ Para praticar conceitos fundamentais de HTML, CCS e conceitos básicos em JS.
  
 3- Onde?
  O jogo será execultado em:
