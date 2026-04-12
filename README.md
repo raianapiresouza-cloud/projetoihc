@@ -2,7 +2,7 @@
 Alunos
 1º Milena
 2º Raiana
-3º Guilherme
+3º Guilhermy
 4º Emanuel
 5º Sandro
 
@@ -23,7 +23,7 @@ Alunos
  Pode ser desenvolvido em uma semana.
  
 5- Quem?
- Desenvolvedores: Estudantes do 1° periodo de Análise e Desenvolvimento de Sistema.
+ Desenvolvedores: Estudantes do 1° periodo de Análise e Desenvolvimento de Sistema e Ciências da Computação.
  
 6- Como? 
  O jogo será desenvolvido usando:
