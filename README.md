@@ -66,9 +66,9 @@ SUBSISTEMA
 - Feedback (mensagens e animações) 
 
 ENTRADAS:
-•  Toques na tela (celular/tablet) 
-•  Cliques no mouse 
-•  Escolhas dentro do jogo 
+- Toques na tela (celular/tablet) 
+- Cliques no mouse
+- Escolhas dentro do jogo 
 
 SAÍDAS:
 - Sons (acertos, erros, as)
