@@ -43,3 +43,34 @@ Alunos
   -Funcionando corretamente
   -Interativo
   -Agradável para o usuário
+
+
+ META:
+- Ensinar conteúdos
+- Desenvolver habilidades cognitivas  
+- Promover aprendizado de forma divertida 
+- Desenvolver um jogo educativo que una aprendizado e entretenimento, proporcionando uma experiência interativa e estimulante para o usuário. 
+
+FRONTEIRAS: 
+- Objetos estáticos e encontrados não podem ser clicados
+- Fase não pode ser pulada se não encontrar todos os objetos 
+
+SUBSISTEMA 
+- Interface do jogo (telas, botões)
+- Fase
+- Objetos encontrados
+- Objetos a procurar
+- Objetos estáticos
+- Botões (iniciar, passar fase)
+- Sons
+- Feedback (mensagens e animações) 
+
+ENTRADAS:
+•  Toques na tela (celular/tablet) 
+•  Cliques no mouse 
+•  Escolhas dentro do jogo 
+
+SAÍDAS:
+- Sons (acertos, erros, as)
+- Animações (personagens se movendo)
+-  Feedback visual (pontuação, estrelas, mensagens) 
