@@ -1,0 +1,28 @@
+.cenario1{
+    display: flex;
+    border-radius: 5px;
+    position: relative; /*Permite alterações nas coordenadas da imagem*/
+}
+
+.intruso{
+    width: 800px;
+}
+
+#cenario_sala{
+    width: 100%;
+    display: block;
+}
+
+#intruso_peixe{
+    position: absolute;
+    top: 228px;
+    left: 245px;
+    width: 200px;
+}
+
+#intruso_morango{
+    position: absolute;
+    top: 155px;
+    right: -25px;
+    width: 150px;
+}
