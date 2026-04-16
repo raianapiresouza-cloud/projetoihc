@@ -1,0 +1,111 @@
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{font-family:Arial}
+
+/* INÍCIO */
+#inicio{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:url("imagens/telainicial.png") center/cover;
+  background-size: 1400px 700px;
+  background-repeat: no-repeat;
+  background-color: black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  
+}
+
+/* botão iniciar*/
+#inicio button{
+    position: fixed;
+  padding:15px 30px;
+  font-size:18px;
+  border:solid rgba(0, 0, 0, 0.589);
+  border-radius:10px;
+  cursor:pointer;
+  background:orange;
+  color:white;
+  transition:0.3s;
+  bottom: 38%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#inicio button:hover{
+  background:darkorange;
+  animation-name: animacao;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes animacao{
+
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
+}
+
+
+/* TEMPO */
+#tempoBox{
+  position:fixed;
+  top:10px;
+  right:10px;
+  background:black;
+  color:white;
+  padding:10px;
+}
+
+/* FASE */
+.fase{
+  width:100%;
+  height:100vh;
+  background-size:cover;
+  background-position:center;
+  display:none;
+  position:relative;
+}
+
+/* FUNDOS */
+.cozinha{background:url("imagens/cozinha.png") center/cover}
+.jardim{background:url("imagens/jardim.jpg") center/cover}
+.banheiro{background:url("imagens/banheiro.jpg") center/cover}
+.sala{background:url("imagens/sala.svg") center/cover}
+.quarto{background:url("imagens/quarto.svg") center/cover}
+
+.ativa{display:block}
+
+/* OBJETOS */
+input{display:none}
+
+.obj{
+  position:absolute;
+  cursor:pointer;
+}
+
+.obj img{
+  width:60px;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+  .obj img{width:45px}
+}
+
+/* ANIMAÇÃO DE ACERTO */
+.obj img{
+  width:60px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* quando marcar (clicar) */
+input:checked + .obj img{
+  transform: scale(1.5) rotate(20deg);
+  opacity: 0;
+}
