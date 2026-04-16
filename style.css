@@ -1,50 +1,111 @@
-section {
-    display: none;
-    text-align: center;
-    padding: 20px;
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{font-family:Arial}
+
+/* INÍCIO */
+#inicio{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:url("imagens/telainicial.png") center/cover;
+  background-size: 1400px 700px;
+  background-repeat: no-repeat;
+  background-color: black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  
 }
 
-#tela-inicial {
-    display: block;
+/* botão iniciar*/
+#inicio button{
+    position: fixed;
+  padding:15px 30px;
+  font-size:18px;
+  border:solid rgba(0, 0, 0, 0.589);
+  border-radius:10px;
+  cursor:pointer;
+  background:orange;
+  color:white;
+  transition:0.3s;
+  bottom: 38%;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-.fase {
-    width: 800px;
-    height: 600px;
-    margin: 0 auto;
-    position: relative;
-    background-size: cover;
-    border: 5px solid #333;
+#inicio button:hover{
+  background:darkorange;
+  animation-name: animacao;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-.intruso {
-    position:absolute;
-    cursor: pointer;
-    transition: transform 0.2s;
+@keyframes animacao{
+
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
 }
 
-.intruso:hover {
-    transform: scale(1.1);
+
+/* TEMPO */
+#tempoBox{
+  position:fixed;
+  top:10px;
+  right:10px;
+  background:black;
+  color:white;
+  padding:10px;
 }
 
-.cenario-container {
-    width: 800px;
-    height: 500px;
-    position: relative;
-    margin: 0 auto;
-    border: 4px solid #2c3e50;
-    overflow: hidden;
-    background-size: cover;
+/* FASE */
+.fase{
+  width:100%;
+  height:100vh;
+  background-size:cover;
+  background-position:center;
+  display:none;
+  position:relative;
 }
 
-.objeto {
-    position: absolute;
-    cursor: pointer;
-    font-size: 50px;
-    transition: transform 0.2s;
-    display: inline-block;
-    padding: 10px;
+/* FUNDOS */
+.cozinha{background:url("imagens/cozinha.png") center/cover}
+.jardim{background:url("imagens/jardim.jpg") center/cover}
+.banheiro{background:url("imagens/banheiro.jpg") center/cover}
+.sala{background:url("imagens/sala.svg") center/cover}
+.quarto{background:url("imagens/quarto.svg") center/cover}
 
-.objeto:hover {
-    transform: scale(1.3) rotate(10deg);
+.ativa{display:block}
+
+/* OBJETOS */
+input{display:none}
+
+.obj{
+  position:absolute;
+  cursor:pointer;
+}
+
+.obj img{
+  width:60px;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+  .obj img{width:45px}
+}
+
+/* ANIMAÇÃO DE ACERTO */
+.obj img{
+  width:60px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* quando marcar (clicar) */
+input:checked + .obj img{
+  transform: scale(1.5) rotate(20deg);
+  opacity: 0;
 }
