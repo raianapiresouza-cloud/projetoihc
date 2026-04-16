@@ -1,83 +1,84 @@
-const telaInicial = document.getElementById('tela-inicial');
-const telaJogo = document.getElementById('tela-f1');
-const telaFinal = document.getElementById('tela-final');
-const btnIniciar = document.getElementById('b-iniciar');
-const btnVoltar = document.getElementById('b-voltar');
+let faseAtual = 0;
+let tempo = 60;
+let jogoIniciado = false;
+let timer = null;
 
-// Iniciar o jogo na Fase 1
-btnIniciar.onclick = () => {
-    telaInicial.style.display = 'none';
-    telaJogo.style.display = 'block';
-    carregarFasePraia();
-};
+const fases = document.querySelectorAll('.fase');
 
-// --- FASE 1: PRAIA ---
-function carregarFasePraia() {
-    telaJogo.innerHTML = '<h2>Fase 1: O que não pertence à Praia?</h2>';
-    
-    const container = document.createElement('div');
-    container.className = 'cenario-container';
-    container.style.backgroundColor = "#fce38a"; // Cor de areia
-    // container.style.backgroundImage = "url('praia.jpg')"; // Quando tiver a imagem, use esta linha
-    telaJogo.appendChild(container);
+// INICIAR JOGO
+function iniciarJogo(){
+  jogoIniciado = true;
 
-    const normais = ['🐚', '🏖️', '🦀', '⛱️'];
-    const intruso = '💻'; // Notebook não pertence à praia
+  document.getElementById('inicio').style.display = 'none';
+  fases[0].classList.add('ativa');
 
-    // Gerar itens normais
-    for (let i = 0; i < 10; i++) {
-        const item = normais[Math.floor(Math.random() * normais.length)];
-        criarElemento(item, container, false, "Isso pertence à praia!");
+  document.getElementById('musica').play();
+
+  iniciarTempo(); // só começa aqui
+}
+
+// CONTADOR DE TEMPO
+function iniciarTempo(){
+  timer = setInterval(()=>{
+    if(!jogoIniciado) return;
+
+    tempo--;
+    document.getElementById('tempo').innerText = tempo;
+
+    if(tempo <= 0){
+      fimDeJogo();
     }
-
-    // Gerar o intruso da praia
-    criarElemento(intruso, container, true, "Boa! Um notebook na areia estragaria!", carregarFaseSala);
+  },1000);
 }
 
-// --- FASE 2: SALA DE ESTAR ---
-function carregarFaseSala() {
-    telaJogo.innerHTML = '<h2>Fase 2: O que não pertence à Sala?</h2>';
-    
-    const container = document.createElement('div');
-    container.className = 'cenario-container';
-    container.style.backgroundColor = "#a8e6cf"; // Cor de parede de sala
-    telaJogo.appendChild(container);
+// VERIFICAR FASE
+document.querySelectorAll('input').forEach(input=>{
+  input.addEventListener('change', verificarFase);
+});
 
-    const moveis = ['🛋️', '📺', '📚', '🖼️', '☕'];
-    const intruso = '⚓'; // Uma âncora de navio não pertence à sala
+function verificarFase(){
+  if(!jogoIniciado) return;
 
-    // Gerar móveis
-    moveis.forEach(movel => {
-        criarElemento(movel, container, false, "Isso é um móvel da sala.");
-    });
+  const faseInputs = fases[faseAtual].querySelectorAll('input');
 
-    // Gerar o intruso da sala
-    criarElemento(intruso, container, true, "Exato! Uma âncora no meio da sala?", finalizarJogo);
+  let todos = true;
+
+  faseInputs.forEach(i=>{
+    if(!i.checked) todos = false;
+  });
+
+  if(todos){
+    fases[faseAtual].classList.remove('ativa');
+    faseAtual++;
+
+    if(faseAtual < fases.length){
+      fases[faseAtual].classList.add('ativa');
+    }else{
+      alert("🏆 Você venceu!");
+      voltarInicio();
+    }
+  }
 }
 
-// --- FUNÇÕES AUXILIARES ---
-
-function criarElemento(simbolo, pai, ehIntruso, mensagem, acaoSucesso) {
-    const el = document.createElement('span');
-    el.innerHTML = simbolo;
-    el.className = 'objeto';
-    el.style.left = Math.random() * 540 + 'px';
-    el.style.top = Math.random() * 340 + 'px';
-
-    el.onclick = () => {
-        if (ehIntruso) {
-            alert(mensagem);
-            acaoSucesso();
-        } else {
-            alert(mensagem);
-        }
-    };
-    pai.appendChild(el);
+// FIM DO JOGO
+function fimDeJogo(){
+  alert("⏰ Tempo acabou!");
+  voltarInicio();
 }
 
-function finalizarJogo() {
-    telaJogo.style.display = 'none';
-    telaFinal.style.display = 'block';
-}
+// RESET COMPLETO
+function voltarInicio(){
+  clearInterval(timer);
 
-btnVoltar.onclick = () => location.reload();
+  faseAtual = 0;
+  tempo = 60;
+  jogoIniciado = false;
+
+  document.getElementById('tempo').innerText = 60;
+
+  fases.forEach(f => f.classList.remove('ativa'));
+
+  document.querySelectorAll('input').forEach(i => i.checked = false);
+
+  document.getElementById('inicio').style.display = 'flex';
+}
