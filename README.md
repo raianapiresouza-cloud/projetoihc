@@ -1,10 +1,10 @@
 # projetoihc
 Alunos
-1º Milena
-2º Raiana
-3º Guilhermy
-4º Emanuel
-5º Sandro
+- Guilhermy Phyllipe Vieira da Cruz	1362614403
+- Sandro Felisberto da Silva	1362612928
+- Emanuel Henrique Vieira de Moura	1362615945
+- Milena de Paula Moraes 	1362613780
+- Raiana de Souza Pires	1362618130
 
 5W3H
 
