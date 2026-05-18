@@ -23,12 +23,13 @@ body {
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.418);
   background-color: rgb(240, 143, 63);
   border: 4px solid rgb(180, 87, 10);
-  border-radius: 10px;
+  border-radius: 20px;
+  box-shadow: 0 6px 0 rgb(180, 87, 10);
   cursor: pointer;
   transition: 0.4s;
 }
 #btnIniciar:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
 }
 
 .fase {
@@ -49,6 +50,21 @@ body {
 }
 #fase3 {
   background: url("../assets/Imagens/fase3/cozinha.png") center/cover;
+}
+
+.nomeFase{
+  font-family: "Luckiest Guy", sans-serif;  color: rgb(92, 59, 30);
+  font-size: 28px;
+  padding: 12px 28px;
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  color: white;
+  background-color: rgb(240, 143, 63);
+  border: 4px solid rgb(180, 87, 10);
+  border-radius: 20px;
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 0 rgb(180, 87, 10);
 }
 
 .obj {
@@ -126,11 +142,72 @@ body {
   left: 20%;
 }
 
+#btnAvancar{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid rgb(180, 87, 10);
+  background-color: rgb(240, 143, 63);
+  color: white;
+  font-size: 40px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 0 rgb(180, 87, 10);
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#btnAvancar:hover{
+  transform: scale(1.08);
+}
+
+#btnAvancar:active{
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 rgb(180, 87, 10);
+}
+
 #final {
-  font-family: "Luckiest Guy", cursive;
-  display: none;
+  font-family: "Luckiest Guy", sans-serif;  display: none;
   height: 100vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background: linear-gradient(
+  to bottom,
+  rgb(143, 211, 255),
+  rgb(223, 246, 255)
+);
+}
+
+#btnVoltar{
+  color: rgb(245, 245, 245);
+  margin-top: 30px;
+  padding: 10px 30px;
+  font-size: 25px;
+  font-family: "Luckiest Guy", cursive;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.418);
+  background-color: rgb(240, 143, 63);
+  border: 4px solid rgb(180, 87, 10);
+  border-radius: 20px;
+  box-shadow: 0 6px 0 rgb(180, 87, 10);
+  cursor: pointer;
+  transition: 0.4s;
+}
+#btnVoltar:hover {
+  transform: scale(1.2);
+}
+
+#parabens{
+  font-size: 70px;
+  color: rgb(240, 143, 63);
+}
+
+#txtFinal {
+  font-size: 28px;
+  color: rgb(92, 59, 30);
 }
