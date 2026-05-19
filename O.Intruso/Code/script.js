@@ -10,23 +10,33 @@ document.getElementById("btnIniciar").addEventListener("click", () => {
 
 document.querySelectorAll(".obj").forEach((obj) => {
   obj.addEventListener("click", function () {
+    if (this.classList.contains("clicado")) return;
+    this.classList.add("clicado");
     this.style.display = "none";
     objetosRestantes--;
-
-    if (objetosRestantes === 0) {
-      proximaFase();
-    }
   });
 });
-
 function iniciarFase() {
   objetosRestantes = fases[faseAtual].querySelectorAll(".obj").length;
 }
 
+document.querySelectorAll(".btnAvancar").forEach((botao) => {
+  botao.addEventListener("click", () => {
+    if (objetosRestantes === 0) {
+      proximaFase();
+    } else {
+      const aviso = document.getElementById("mensagemAviso");
+      aviso.textContent = "Você ainda não encontrou todos os Intrusos!";
+      aviso.classList.add("mostrar");
+      setTimeout(() => {
+        aviso.classList.remove("mostrar");
+      }, 2500);
+    }
+  });
+});
 function proximaFase() {
   fases[faseAtual].classList.remove("ativa");
   faseAtual++;
-
   if (faseAtual < fases.length) {
     fases[faseAtual].classList.add("ativa");
     iniciarFase();
@@ -34,7 +44,6 @@ function proximaFase() {
     document.getElementById("final").style.display = "flex";
   }
 }
-
 document.getElementById("btnVoltar").addEventListener("click", () => {
   location.reload();
 });
