@@ -4,7 +4,7 @@ body {
 }
 
 #inicio {
-  background: url("../assets/Imagens/Iniciar/telainicial.avif");
+  background: url("assets/Imagens/Iniciar/telainicial.avif");
   background-size: 100% 100%;
   background-position: top center;
   background-repeat: no-repeat;
@@ -43,13 +43,13 @@ body {
 }
 
 #fase1 {
-  background: url("../assets/Imagens/fase1/sala.avif") center/cover;
+  background: url("assets/Imagens/fase1/sala.avif") center/cover;
 }
 #fase2 {
-  background: url("../assets/Imagens/fase2/quarto.avif") center/cover;
+  background: url("assets/Imagens/fase2/quarto.avif") center/cover;
 }
 #fase3 {
-  background: url("../assets/Imagens/fase3/cozinha.avif") center/cover;
+  background: url("assets/Imagens/fase3/cozinha.avif") center/cover;
 }
 
 .nomeFase {
