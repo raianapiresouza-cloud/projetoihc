@@ -216,8 +216,8 @@ body {
   font-family: "Luckiest Guy", cursive;
   font-size: 28px;
   pointer-events: none;
-  color: rgb(245, 245, 245);
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.418);
+  color: rgb(240, 138, 55);
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.308);
 }
 
 #mensagemAviso {
