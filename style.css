@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  font-family: inherit;
+}
+
+#inicio {
+  background: url("../assets/Imagens/Iniciar/telainicial.avif");
+  background-size: 100% 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#btnIniciar {
+  color: rgb(245, 245, 245);
+  margin-top: 190px;
+  padding: 10px 30px;
+  font-size: 25px;
+  font-family: "Luckiest Guy", cursive;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.418);
+  background-color: rgb(240, 143, 63);
+  border: 4px solid rgb(180, 87, 10);
+  border-radius: 20px;
+  box-shadow: 0 6px 0 rgb(180, 87, 10);
+  cursor: pointer;
+  transition: 0.4s;
+}
+#btnIniciar:hover {
+  transform: scale(1.2);
+}
+
+.fase {
+  display: none;
+  height: 100vh;
+  position: relative;
+}
+
+.ativa {
+  display: block;
+}
+
+#fase1 {
+  background: url("../assets/Imagens/fase1/sala.avif") center/cover;
+}
+#fase2 {
+  background: url("../assets/Imagens/fase2/quarto.avif") center/cover;
+}
+#fase3 {
+  background: url("../assets/Imagens/fase3/cozinha.avif") center/cover;
+}
+
+.nomeFase {
+  font-family: "Luckiest Guy", sans-serif;
+  color: rgb(92, 59, 30);
+  font-size: 28px;
+  padding: 12px 28px;
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  color: white;
+  background-color: rgb(240, 143, 63);
+  border: 4px solid rgb(180, 87, 10);
+  border-radius: 20px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 0 rgb(180, 87, 10);
+}
+
+.obj {
+  position: absolute;
+  width: 60px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.obj:hover {
+  transform: scale(1.4);
+}
+
+.p1 {
+  top: 85%;
+  left: 50px;
+}
+.p2 {
+  top: 62%;
+  left: 73%;
+}
+.p3 {
+  top: 67%;
+  left: 50%;
+}
+.p4 {
+  top: 93%;
+  left: 1%;
+}
+.p5 {
+  top: 60%;
+  left: 40%;
+}
+.p6 {
+  top: 84%;
+  left: 70%;
+}
+.p7 {
+  top: 50%;
+  left: 84%;
+}
+.p8 {
+  top: 80%;
+  left: 20%;
+}
+.p9 {
+  top: 29%;
+  left: 26%;
+}
+.p10 {
+  top: 74%;
+  left: 96%;
+}
+.p11 {
+  top: 57%;
+  left: 194px;
+}
+.p12 {
+  top: 93%;
+  left: 37%;
+}
+.p13 {
+  top: 50%;
+  left: 48%;
+}
+.p14 {
+  top: 60%;
+  left: 1360px;
+}
+.p15 {
+  top: 16%;
+  left: 80%;
+}
+.p16 {
+  top: 2%;
+  left: 38%;
+}
+
+.btnAvancar {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid rgb(180, 87, 10);
+  background-color: rgb(240, 143, 63);
+  color: white;
+  font-size: 40px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 0 rgb(180, 87, 10);
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnAvancar:hover {
+  transform: scale(1.08);
+}
+
+.btnAvancar:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 rgb(180, 87, 10);
+}
+
+#final {
+  font-family: "Luckiest Guy", sans-serif;
+  display: none;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(
+    to bottom,
+    rgb(143, 211, 255),
+    rgb(223, 246, 255)
+  );
+}
+
+#btnVoltar {
+  color: rgb(245, 245, 245);
+  margin-top: 30px;
+  padding: 10px 30px;
+  font-size: 25px;
+  font-family: "Luckiest Guy", cursive;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.418);
+  background-color: rgb(240, 143, 63);
+  border: 4px solid rgb(180, 87, 10);
+  border-radius: 20px;
+  box-shadow: 0 6px 0 rgb(180, 87, 10);
+  cursor: pointer;
+  transition: 0.4s;
+}
+#btnVoltar:hover {
+  transform: scale(1.2);
+}
+
+#parabens {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 70px;
+  pointer-events: none;
+  color: rgb(240, 143, 63);
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.418);
+}
+
+#txtFinal {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 28px;
+  pointer-events: none;
+  color: rgb(245, 245, 245);
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.418);
+}
+
+#mensagemAviso {
+  position: fixed;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(240, 143, 63);
+  color: white;
+  padding: 15px 30px;
+  border: 4px solid rgb(180, 87, 10);
+  border-radius: 20px;
+  font-size: 22px;
+  font-family: "Luckiest Guy", cursive;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 0 rgb(180, 87, 10);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+#mensagemAviso.mostrar {
+  opacity: 1;
+}
