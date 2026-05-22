@@ -4,16 +4,18 @@ body {
 }
 
 #inicio {
-  background: url("assets/Imagens/Iniciar/telainicial.avif");
-  background-size: 100% 100%;
-  background-position: top center;
-  background-repeat: no-repeat;
+  background: linear-gradient(
+    to bottom,
+    rgb(143, 211, 255),
+    rgb(223, 246, 255)
+  );
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
 #btnIniciar {
   color: rgb(245, 245, 245);
   margin-top: 190px;
