@@ -577,7 +577,7 @@ body {
 .lanterna-deco {
   width: 7%;
   top: 75%;
-  left: %;
+  left: 32%;
   animation: girarPulsar 4s ease-in-out infinite;
 }
 
