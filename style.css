@@ -564,22 +564,22 @@ body {
 
 .sos-deco {
   width: 9%;
-  top: 12%;
-  left: 5%;
+  top: 18%;
+  left: 15%;
   animation: pulsar 2.8s ease-in-out infinite;
 }
 
 .aquarela-deco {
   width: 8%;
   top: 55%;
-  left: 88%;
+  left: 80%;
   animation: pulsar 3.5s ease-in-out infinite;
 }
 
 .lanterna-deco {
   width: 7%;
   top: 75%;
-  left: 32%;
+  left: 28%;
   animation: girarPulsar 4s ease-in-out infinite;
 }
 
